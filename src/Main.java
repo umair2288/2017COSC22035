@@ -9,7 +9,5 @@ public class Main {
         test.courseTaught=COSC22035;
         test.outSal();
         test.calcSal();
-
-
     }
 }
