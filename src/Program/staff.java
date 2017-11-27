@@ -1,3 +1,5 @@
+package Program;
+
 public class staff extends user {
     String universityID;
     double salary;

@@ -1,3 +1,5 @@
+package Program;
+
 import java.util.Scanner;
 
 public class Main {
@@ -29,11 +31,17 @@ public class Main {
         //test.name=sc.nextLine();
 
         //System.out.println("Out of Exception");
-        //System.out.print("Input Credit Value:");
-        //COSC22035.creditValue=sc.nextInt();
-        UPL.salary=333333;
-        UPL.courseTaught=COSC22035;
+        System.out.print("Input Credit Value:");
+        COSC22035.creditValue=sc.nextInt();
+        //UPL.teachCourse(COSC22035);
+        UPL.courseTaught.add(COSC22035);
         UPL.outSal();
+        try{
+            if (UPL.totalCredits()>0) throw new courseException();
+        }catch (courseException exp)
+        {
+            exp.printStackTrace();
+        }
         UPL.calcSal();
 
 

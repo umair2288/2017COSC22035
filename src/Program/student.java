@@ -1,8 +1,11 @@
+package Program;
+
 class student extends user {
     String universityID;
     double GPA;
     int academicYr;
     int path;
+
 
     public void displayInfo()
     {

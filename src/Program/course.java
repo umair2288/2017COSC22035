@@ -1,3 +1,5 @@
+package Program;
+
 public class course {
     String courseCode;
     staff lecturer;
