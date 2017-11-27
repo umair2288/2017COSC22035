@@ -1,10 +1,13 @@
 package Program;
 
+import DBConnect.dbConnect;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        DBConnect.dbConnect DB = new dbConnect();
         System.out.print("Input Lecturer Name:");
         academic UPL = new academic();
         course COSC22035 = new course();
@@ -36,8 +39,9 @@ public class Main {
         //UPL.teachCourse(COSC22035);
         UPL.courseTaught.add(COSC22035);
         UPL.outSal();
+        DB.Connect2DB();
         try{
-            if (UPL.totalCredits()>0) throw new courseException();
+            if (UPL.totalCredits()>10) throw new courseException();
         }catch (courseException exp)
         {
             exp.printStackTrace();
