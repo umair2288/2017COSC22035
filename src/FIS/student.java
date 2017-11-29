@@ -1,4 +1,4 @@
-package Program;
+package FIS;
 
 class student extends user {
     String universityID;

@@ -1,4 +1,4 @@
-package Program;
+package FIS;
 
 public class staff extends user {
     String universityID;

@@ -1,4 +1,4 @@
-package Program;
+package FIS;
 
 public class courseException extends Exception{
     public courseException()

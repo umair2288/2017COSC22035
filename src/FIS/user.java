@@ -1,4 +1,4 @@
-package Program;
+package FIS;
 
 public abstract class  user {
     String NIC;
