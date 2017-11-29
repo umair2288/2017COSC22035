@@ -1,9 +1,9 @@
 package Program;
 
-public class courseException extends Exception {
+public class courseException extends Exception{
     public courseException()
     {
-        System.out.println("A lecturer can only Teach 10 credits");
+        System.out.println("Throws Course Exception");
     }
-
 }
+
