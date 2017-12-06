@@ -9,8 +9,39 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Statement stml = null;
 
-        DBConnect.dbConnect DB = new dbConnect();//Object from DB connect
-        DB.Connect2DB();//Connect to DB
+       // DBConnect.dbConnect DB = new dbConnect();//Object from DB connect
+        //DB.Connect2DB();//Connect to DB
+
+        DBConnect.dbConnect DB = new dbConnect();
+        stml = DB.Conn2DB();
+
+        String query1 = "SELECT * FROM userdetails";
+        String query2 = "INSERT userdetails VALUES role=10";
+
+        try{
+            stml.executeUpdate(query2);
+            System.out.println("Table Updated");
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        try{
+
+            ResultSet rs = stml.executeQuery(query1);
+            while(rs.next()){
+                int userId = rs.getInt("UserId");
+                String userName = rs.getString("UserName");
+                String password = rs.getString("Password");
+                System.out.println("UserID:"+ " Username:" + userName+ " Password:"+password);
+            }
+        }catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+
+        DB.closeDB();
+
+
 
         System.out.print("Input Lecturer Name:");
         academic UPL = new academic();
