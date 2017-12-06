@@ -40,6 +40,7 @@ public class Login {
         loginFR.setContentPane(new Login().Login);
         loginFR.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         loginFR.pack();
+
         loginFR.setVisible(true);
 
     }
